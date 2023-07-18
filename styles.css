@@ -38,26 +38,45 @@ td {
 .input-container {
   display: flex;
   align-items: center;
+  margin-bottom: 10px;
 }
 
 input[type="text"] {
   padding: 10px;
   font-size: 16px;
   border: 1px solid #ccc;
-  border-radius: 4px 0 0 4px;
+  border-radius: 4px;
 }
 
 button {
   padding: 10px;
   font-size: 16px;
   border: 1px solid #ccc;
-  border-left: none;
-  border-radius: 0 4px 4px 0;
+  border-radius: 4px;
   background-color: #3498db;
   color: #fff;
   cursor: pointer;
+  margin-left: 10px;
 }
 
 button:hover {
   background-color: #2184cc;
+}
+
+.word-buttons {
+  display: flex;
+  margin-bottom: 10px;
+}
+
+.word-buttons button {
+  margin-right: 10px;
+  background-color: #4caf50;
+}
+
+.word-buttons button:last-child {
+  margin-right: 0;
+}
+
+.word-buttons button:hover {
+  background-color: #45a049;
 }
