@@ -49,7 +49,7 @@
       const wordInput = document.getElementById(`wordInput${index}`);
       const word = wordInput.value.trim().toUpperCase();
 
-      fetch(`https://raw.githubusercontent.com/Eury223/ocean-tangerine/main/${word}.txt`)
+      fetch(`https://raw.githubusercontent.com/eury223/ocean-tangerine/main/${word}.txt`)
         .then(response => response.text())
         .then(data => {
           const correctWord = data.trim().toUpperCase();
