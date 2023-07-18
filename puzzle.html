@@ -92,7 +92,9 @@
     }
 
     // Load the default words when the page loads (you can remove this if not needed)
-    
+    document.addEventListener('DOMContentLoaded', () => {
+      for (let i = 1; i <= totalTextFiles; i++) {
+        loadWord(i);
       }
     });
   </script>
