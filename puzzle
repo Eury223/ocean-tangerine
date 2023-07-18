@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Crossword Puzzle</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="crossword">
+    <table>
+      <tr>
+        <td></td>
+        <td class="empty"></td>
+        <td class="empty"></td>
+        <td class="empty"></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td></td>
+        <td></td>
+        <td class="empty"></td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td class="empty"></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td></td>
+        <td class="empty"></td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td></td>
+        <td></td>
+        <td class="empty"></td>
+        <td></td>
+        <td></td>
+      </tr>
+    </table>
+  </div>
+
+  <script>
+    // JavaScript code for the crossword puzzle (answers are hard-coded)
+    const tableCells = document.querySelectorAll('.crossword td');
+    const answers = [
+      ['T', 'H', 'I', 'S'],
+      ['I', '', 'A', ''],
+      ['S', 'P', 'A', 'M'],
+      ['', 'M', '', ''],
+      ['I', '', 'D', ''],
+    ];
+
+    tableCells.forEach((cell, index) => {
+      if (answers[Math.floor(index / 5)][index % 5]) {
+        cell.textContent = answers[Math.floor(index / 5)][index % 5];
+      }
+    });
+  </script>
+</body>
+</html>
