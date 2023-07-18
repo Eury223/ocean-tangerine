@@ -80,3 +80,10 @@ button:hover {
 .word-buttons button:hover {
   background-color: #45a049;
 }
+
+/* Add new styles for the crossword boxes */
+td.box {
+  background-color: #f0f0f0; /* Background color of the boxes */
+  font-weight: bold;
+}
+
