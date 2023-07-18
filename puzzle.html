@@ -77,9 +77,13 @@
         if (word) {
           const row = word.split('');
           const tr = document.createElement('tr');
-          row.forEach(cell => {
+          row.forEach((cell, cellIndex) => {
             const td = document.createElement('td');
             td.textContent = cell;
+            // Add the class "box" to the cells to create boxes for the words
+            if (cell === wordToForm[cellIndex]) {
+              td.classList.add('box');
+            }
             tr.appendChild(td);
           });
           crosswordTable.appendChild(tr);
