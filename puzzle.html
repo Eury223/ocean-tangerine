@@ -11,50 +11,61 @@
   </div>
 
   <div class="input-container">
-    <input type="text" id="puzzleIdInput" placeholder="Enter puzzle ID">
-    <button onclick="loadPuzzle()">Load Puzzle</button>
+    <input type="text" id="wordInput1" placeholder="Enter word for Text File 1">
+    <button onclick="populateCrossword(1)">Submit</button>
   </div>
 
   <div class="input-container">
-    <input type="text" id="wordInput" placeholder="Enter word">
-    <button onclick="populateCrossword()">Submit</button>
+    <input type="text" id="wordInput2" placeholder="Enter word for Text File 2">
+    <button onclick="populateCrossword(2)">Submit</button>
   </div>
 
+  <!-- Add four more input containers for Text Files 3 to 6 -->
+
   <script>
+    const totalTextFiles = 6;
     let answers = [];
 
-    function loadPuzzle() {
-      const puzzleIdInput = document.getElementById('puzzleIdInput');
-      const puzzleId = puzzleIdInput.value.trim();
+    function loadWord(index) {
+      const wordInput = document.getElementById(`wordInput${index}`);
+      const word = wordInput.value.trim().toUpperCase();
 
-      fetch(`https://raw.githubusercontent.com/your-username/your-repository/main/puzzle_${puzzleId}.txt`)
+      fetch(`https://raw.githubusercontent.com/your-username/your-repository/main/word_${index}.txt`)
         .then(response => response.text())
         .then(data => {
-          answers = data.trim().split('\n').map(row => row.split(','));
-          resetCrossword();
+          const correctWord = data.trim().toUpperCase();
+          if (word === correctWord) {
+            answers[index - 1] = word;
+            resetCrossword();
+          } else {
+            console.log(`Word for Text File ${index} is incorrect.`);
+          }
         })
         .catch(error => {
-          console.error('Error fetching crossword answers:', error);
+          console.error(`Error fetching word for Text File ${index}:`, error);
         });
     }
 
     function resetCrossword() {
       const crosswordTable = document.getElementById('crosswordTable');
       crosswordTable.innerHTML = '';
-      answers.forEach(row => {
-        const tr = document.createElement('tr');
-        row.forEach(cell => {
-          const td = document.createElement('td');
-          if (cell) {
-            td.textContent = cell;
-          } else {
-            td.classList.add('empty');
-            td.setAttribute('contenteditable', 'true'); // Allow user input
-            td.addEventListener('input', handleCellInput); // Add input event listener
-          }
-          tr.appendChild(td);
-        });
-        crosswordTable.appendChild(tr);
+      answers.forEach((word, index) => {
+        if (word) {
+          const row = answers[index].split(',');
+          const tr = document.createElement('tr');
+          row.forEach(cell => {
+            const td = document.createElement('td');
+            if (cell) {
+              td.textContent = cell;
+            } else {
+              td.classList.add('empty');
+              td.setAttribute('contenteditable', 'true'); // Allow user input
+              td.addEventListener('input', handleCellInput); // Add input event listener
+            }
+            tr.appendChild(td);
+          });
+          crosswordTable.appendChild(tr);
+        }
       });
     }
 
@@ -65,8 +76,12 @@
       console.log('User input:', inputText);
     }
 
-    // Load the default puzzle when the page loads (you can remove this if not needed)
-    document.addEventListener('DOMContentLoaded', loadPuzzle);
+    // Load the default words when the page loads (you can remove this if not needed)
+    document.addEventListener('DOMContentLoaded', () => {
+      for (let i = 1; i <= totalTextFiles; i++) {
+        loadWord(i);
+      }
+    });
   </script>
 </body>
 </html>
