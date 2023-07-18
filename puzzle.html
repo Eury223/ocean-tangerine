@@ -6,61 +6,41 @@
 </head>
 <body>
   <div class="crossword">
-    <table>
-      <tr>
-        <td></td>
-        <td class="empty"></td>
-        <td class="empty"></td>
-        <td class="empty"></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td></td>
-        <td></td>
-        <td class="empty"></td>
-        <td></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td class="empty"></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td></td>
-        <td class="empty"></td>
-        <td></td>
-        <td></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td></td>
-        <td></td>
-        <td class="empty"></td>
-        <td></td>
-        <td></td>
-      </tr>
+    <table id="crosswordTable">
     </table>
   </div>
 
-  <script>
-    // JavaScript code for the crossword puzzle (answers are hard-coded)
-    const tableCells = document.querySelectorAll('.crossword td');
-    const answers = [
-      ['T', 'H', 'I', 'S'],
-      ['I', '', 'A', ''],
-      ['S', 'P', 'A', 'M'],
-      ['', 'M', '', ''],
-      ['I', '', 'D', ''],
-    ];
+  <div class="input-container">
+    <input type="text" id="wordInput" placeholder="Enter word">
+    <button onclick="populateCrossword()">Submit</button>
+  </div>
 
-    tableCells.forEach((cell, index) => {
-      if (answers[Math.floor(index / 5)][index % 5]) {
-        cell.textContent = answers[Math.floor(index / 5)][index % 5];
+  <script>
+    let answers = [];
+
+    fetch('https://raw.githubusercontent.com/your-username/your-repository/main/answers.txt')
+      .then(response => response.text())
+      .then(data => {
+        answers = data.trim().split('\n').map(row => row.split(','));
+      })
+      .catch(error => {
+        console.error('Error fetching crossword answers:', error);
+      });
+
+    function populateCrossword() {
+      const wordInput = document.getElementById('wordInput');
+      const word = wordInput.value.trim().toUpperCase();
+      wordInput.value = '';
+
+      for (let rowIndex = 0; rowIndex < answers.length; rowIndex++) {
+        for (let cellIndex = 0; cellIndex < answers[rowIndex].length; cellIndex++) {
+          if (answers[rowIndex][cellIndex] === word) {
+            const cell = document.querySelector(`#crosswordTable tr:nth-child(${rowIndex + 1}) td:nth-child(${cellIndex + 1})`);
+            cell.textContent = word;
+          }
+        }
       }
-    });
+    }
   </script>
 </body>
 </html>
