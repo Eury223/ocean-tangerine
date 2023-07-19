@@ -1,26 +1,25 @@
 <!DOCTYPE html>
 <html>
 <head>
-  
+  <link rel="stylesheet" type="text/css" href="styles.css">
 </head>
 <body>
   <div class="crossword">
-    <table>
+    <table id="crosswordTable">
       <tr>
         <td>1</td>
         <td>2</td>
         <td>3</td>
-        <td>4</td>
-        <td>5</td>
-        <td>6</td>
       </tr>
       <tr>
-        <td><input type="text" id="word1" /></td>
-        <td><input type="text" id="word2" /></td>
-        <td><input type="text" id="word3" /></td>
-        <td><input type="text" id="word4" /></td>
-        <td><input type="text" id="word5" /></td>
-        <td><input type="text" id="word6" /></td>
+        <td><button onclick="checkWord('word1')">Check</button></td>
+        <td><button onclick="checkWord('word2')">Check</button></td>
+        <td><button onclick="checkWord('word3')">Check</button></td>
+      </tr>
+      <tr>
+        <td id="letter1"></td>
+        <td id="letter2"></td>
+        <td id="letter3"></td>
       </tr>
     </table>
   </div>
