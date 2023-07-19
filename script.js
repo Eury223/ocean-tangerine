@@ -1,4 +1,6 @@
 
+  
+  // Define the function to check the word
 function checkWord1() {
   var word1input = document.getElementById("word1Input").value;
   var w1 = "AILEEN";
@@ -6,7 +8,6 @@ function checkWord1() {
 
 if (word1input === w1) {
     alert("Okaaaay, that was easy!");
-    document.getElementById("myTable");
     cell1A.innerText = "A";
     cell1I.innerText = "I";
     cell1L.innerText = "L";
@@ -25,7 +26,6 @@ function checkWord2() {
 
 if (word2input === w2) {
     alert("Awieee, owkie tama! :>");
-    document.getElementById("myTable");
     cell2B.innerText = "B";
     cell2L.innerText = "L";
     cell2U.innerText = "U";
@@ -43,7 +43,6 @@ function checkWord3() {
 
 if (word3input === w3) {
     alert("Huwaw, sigi next. HAHAHA");
-    document.getElementById("myTable");
     cell3Z.innerText = "Z";
     cell3E.innerText = "E";
     cell3R.innerText = "R";
@@ -61,7 +60,6 @@ function checkWord4() {
 
 if (word4input === w4) {
     alert("ML gadz yarn? Ge na next!");
-    document.getElementById("myTable");
     cell4V.innerText = "V";
     cell4A.innerText = "A";
     cell4L.innerText = "L";
@@ -79,7 +77,6 @@ function checkWord5() {
 
 if (word5input === w5) {
     alert("Ameyziing, nagreview.");
-    document.getElementById("myTable");
     cell5T.innerText = "T";
     cell5I.innerText = "I";
     cell5M.innerText = "M";
@@ -97,7 +94,6 @@ function checkWord6() {
 
 if (word6input === w6) {
     alert("Goodjob mamshie, u know your name naman pala. Chena HAHAHA");
-    document.getElementById("myTable");
     cell6L.innerText = "L";
     cell6U.innerText = "U";
     cell6I.innerText = "I";
