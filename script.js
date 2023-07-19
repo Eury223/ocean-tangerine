@@ -1,44 +1,23 @@
-function checkWord(id, fileName) {
-  let input = document.getElementById(id);
-  let word = input.value.toUpperCase();
-  
-  fetch(fileName)
-    .then(response => response.text())
-    .then(data => {
-      if (data.trim().toUpperCase() === word) {
-        input.value = word;
-        input.disabled = true;
-      } else {
-        input.value = '';
-        alert('Incorrect word!');
-      }
-    })
-    .catch(error => {
-      console.error('Error:', error);
-    });
+function checkWord(wordId) {
+  const letters = {
+    word1: "AILEEN",
+    word2: "BLUE",
+    word3: "ZERO"
+  };
+
+  const letterId = wordId.replace("word", "letter");
+  const letterCell = document.getElementById(letterId);
+  const wordButton = document.getElementById(wordId);
+
+  if (letters[wordId] === letterCell.innerHTML) {
+    alert("Word already matched!");
+  } else {
+    if (letters[wordId]) {
+      letterCell.innerHTML = letters[wordId];
+      wordButton.disabled = true;
+      alert("Word matched!");
+    } else {
+      alert("Word not found!");
+    }
+  }
 }
-
-// Event listeners for each text box
-document.getElementById('word1').addEventListener('blur', () => {
-  checkWord('word1', 'aileen.txt');
-});
-
-document.getElementById('word2').addEventListener('blur', () => {
-  checkWord('word2', 'blue.txt');
-});
-
-document.getElementById('word3').addEventListener('blur', () => {
-  checkWord('word3', 'zero.txt');
-});
-
-document.getElementById('word4').addEventListener('blur', () => {
-  checkWord('word4', 'vale.txt');
-});
-
-document.getElementById('word5').addEventListener('blur', () => {
-  checkWord('word5', 'time.txt');
-});
-
-document.getElementById('word6').addEventListener('blur', () => {
-  checkWord('word6', 'luis.txt');
-});￼Enter
