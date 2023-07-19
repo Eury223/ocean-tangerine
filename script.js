@@ -1,23 +1,23 @@
-function checkWord(wordId) {
-  const letters = {
-    word1: "AILEEN",
-    word2: "BLUE",
-    word3: "ZERO"
+function checkWord(wordId, inputId) {
+  const answers = {
+    word1: "A",
+    word2: "B",
+    word3: "C"
   };
 
   const letterId = wordId.replace("word", "letter");
   const letterCell = document.getElementById(letterId);
-  const wordButton = document.getElementById(wordId);
+  const wordInput = document.getElementById(inputId);
 
-  if (letters[wordId] === letterCell.innerHTML) {
-    alert("Word already matched!");
-  } else {
-    if (letters[wordId]) {
-      letterCell.innerHTML = letters[wordId];
-      wordButton.disabled = true;
-      alert("Word matched!");
+  if (answers[wordId] === wordInput.value.toUpperCase()) {
+    if (letterCell.innerHTML === wordInput.value.toUpperCase()) {
+      alert("Word already matched!");
     } else {
-      alert("Word not found!");
+      letterCell.innerHTML = wordInput.value.toUpperCase();
+      wordInput.value = "";
+      alert("Word matched!");
     }
+  } else {
+    alert("Word does not match the answer!");
   }
 }
