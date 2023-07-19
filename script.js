@@ -35,7 +35,11 @@ if (word2input === w2) {
     cell2U.innerText = "U";
     cell2E.innerText = "E";
    
-  } else {
+  } 
+else if (word2input==="") {
+    alert("SUMAGOOOOOT KAAAAA!");
+}
+else {
     alert("WROOOONG! HMP!");
   }
 }
@@ -52,7 +56,11 @@ if (word3input === w3) {
     cell3R.innerText = "R";
     cell3O.innerText = "O";
     
-  } else {
+  } 
+else if (word3input==="") {
+    alert("SUMAGOOOOOT KAAAAA!");
+}
+else {
     alert("WROOOONG! HMP!");
   }
 }
@@ -69,7 +77,11 @@ if (word4input === w4) {
     cell4L.innerText = "L";
     cell4E.innerText = "E";
     
-  } else {
+  }
+else if (word4input==="") {
+    alert("SUMAGOOOOOT KAAAAA!");
+}
+else {
     alert("WROOOONG! HMP!");
   }
 }
@@ -86,7 +98,10 @@ if (word5input === w5) {
     cell5M.innerText = "M";
     cell5E.innerText = "E";
     
-  } else {
+  } else if (word5input==="") {
+    alert("SUMAGOOOOOT KAAAAA!");
+}
+else {
     alert("WROOOONG! HMP!");
   }
 }
@@ -103,7 +118,12 @@ if (word6input === w6) {
     cell6I.innerText = "I";
     cell6S.innerText = "S";
     
-  } else {
+  }
+else if (word6input==="") {
+    alert("SUMAGOOOOOT KAAAAA!");
+}
+
+else {
     alert("Mamshie naman, name mo na yan o, HMP!");
   }
 }
