@@ -1,0 +1,71 @@
+<!<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gift Card </title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #242424;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+    .gift-card {
+      background-color: #ffffff;
+      border: 1px solid #ccc;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      padding: 20px;
+      max-width: 300px;
+      text-align: center;
+    }
+    .gift-card img {
+      max-width: 100%;
+      height: auto;
+    }
+    .gift-card h2 {
+      color: #333;
+      margin-top: 10px;
+    }
+    .gift-card p {
+      color: #666;
+    }
+    .gift-card button {
+      background-color: #d4af37;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      padding: 10px 20px;
+      margin-top: 20px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+    .gift-card button:hover {
+      background-color: #e64a19;
+    }
+  </style>
+</head>
+<body>
+  <div class="gift-card">
+    <img src="https://raw.githubusercontent.com/Eury223/Bdy/main/mi.png" alt="Gift Card Image">
+    <h2>This serves as a redeemable gift card!</h2>
+    <p>Click the button below for more details. Proceed with caution. Chena, basta click mo na lang mamshie HHAHAHAHAHA</p>
+
+<button onclick="redirectToTxtFile()">MUWAH!</button>
+
+  <script>
+    function redirectToTxtFile() {
+      var githubUsername = "eury223";
+      var repositoryName = "Bdy";
+      var txtFilePath = "MUWAH.txt";
+      var url = "https://raw.githubusercontent.com/" + githubUsername + "/" + repositoryName + "/main/" + txtFilePath;
+      window.location.href = url;
+    }
+  </script>
+  </div>
+</body>
+</html>
