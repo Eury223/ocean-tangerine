@@ -1,15 +1,4 @@
-//function checkWord(wordId, inputId) {
-//  const answers = {
- //   word1: "AILEEN",
- //   word2: "BLUE",
-  //  word3: "ZERO",
- //   word4: "VALE",
-  //  word5: "TIME",
-  // word6: "LUIS"
-  //};
 
-  
-  // Define the function to check the word
 function checkWord1() {
   var word1input = document.getElementById("word1Input").value;
   var w1 = "AILEEN";
