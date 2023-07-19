@@ -14,7 +14,11 @@ if (word1input === w1) {
     cell1E.innerText = "E";
     cell1E2.innerText = "E";
     cell1N.innerText = "N";
-  } else {
+  } 
+ else if (word1input==="") {
+    alert("SUMAGOOOOOT KAAAAA!");
+ }
+else {
     alert("WROOOONG! HMP!");
   }
 }
