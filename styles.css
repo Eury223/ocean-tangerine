@@ -28,8 +28,8 @@ td {
   border: 3px solid black;
   padding: 0; /* Set padding to 0 to ensure cells remain square */
   text-align: center;
-  width: 10%; /* Set the width and height of cells as a percentage */
-  padding-bottom: 10%; /* Set the padding at the bottom to maintain square cells */
+  width: 100px; /* Set the width and height of cells to a fixed size */
+  height: 100px;
   font-size: 30px;
 }
 
@@ -39,7 +39,7 @@ th {
 
 /* Input and button styles */
 input[type="text"] {
-  width: 50%;
+  width: 300px; /* Set the width of input fields to a fixed size */
   padding: 8px;
   margin-bottom: 6px;
   border: 3px solid #ccc;
@@ -70,10 +70,11 @@ button:active {
 @media only screen and (max-width: 600px) {
   .table-container,
   .buttons-container {
-    max-width: 90%;
+    max-width: 800px; /* Set a fixed max-width for small screens to maintain consistency */
   }
 
   input[type="text"] {
+    width: 300px;
     font-size: 14px;
   }
 
