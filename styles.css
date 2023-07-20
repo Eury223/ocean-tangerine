@@ -58,6 +58,10 @@ button {
   font-size: 16px;
 }
 
+a {
+  text-decoration: none;
+}
+
 button:hover {
   background-color: #e64a19;
 }
@@ -89,8 +93,5 @@ button:active {
   }
 }
 
-/* Remove underline from the "Click Here" button */
-#clickHereButton {
-  text-decoration: none;
-}
+
 
