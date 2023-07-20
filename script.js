@@ -1,12 +1,13 @@
+// Define a global variable to keep track of correct guesses
+let allWordsGuessed = false;
 
-  
-  // Define the function to check the word
+// Define the function to check the word
 function checkWord1() {
   var word1input = document.getElementById("word1Input").value;
   var w1 = "AILEEN";
   word1input = word1input.toUpperCase();
 
-if (word1input === w1) {
+  if (word1input === w1) {
     alert("Okaaaay, that was easy!");
     cell1A.innerText = "A";
     cell1I.innerText = "I";
@@ -14,14 +15,18 @@ if (word1input === w1) {
     cell1E.innerText = "E";
     cell1E2.innerText = "E";
     cell1N.innerText = "N";
-  } 
- else if (word1input==="") {
+  } else if (word1input === "") {
     alert("SUMAGOOOOOT KAAAAA!");
- }
-else {
+  } else {
     alert("WROOOONG! HMP!");
   }
+
+  // After updating the word1, check if all words are guessed correctly
+  checkAllWordsGuessed();
 }
+
+// Define the functions for checking other words (checkWord2, checkWord3, etc.)
+// ...
 
 function checkWord2() {
   var word2input = document.getElementById("word2Input").value;
@@ -42,7 +47,10 @@ else if (word2input==="") {
 else {
     alert("WROOOONG! HMP!");
   }
+  checkAllWordsGuessed();
 }
+
+
 
 function checkWord3() {
   var word3input = document.getElementById("word3Input").value;
@@ -63,7 +71,10 @@ else if (word3input==="") {
 else {
     alert("WROOOONG! HMP!");
   }
+  checkAllWordsGuessed();
 }
+
+
 
 function checkWord4() {
   var word4input = document.getElementById("word4Input").value;
@@ -84,7 +95,10 @@ else if (word4input==="") {
 else {
     alert("WROOOONG! HMP!");
   }
+  checkAllWordsGuessed();
 }
+
+
 
 function checkWord5() {
   var word5input = document.getElementById("word5Input").value;
@@ -104,7 +118,10 @@ if (word5input === w5) {
 else {
     alert("WROOOONG! HMP!");
   }
+  checkAllWordsGuessed();
 }
+
+
 
 function checkWord6() {
   var word6input = document.getElementById("word6Input").value;
@@ -126,22 +143,11 @@ else if (word6input==="") {
 else {
     alert("Mamshie naman, name mo na yan o, HMP!");
   }
-}
-
-
-////////////
-// Define a global variable to keep track of correct guesses
-let allWordsGuessed = false;
-
-// Define the function to check the word
-function checkWord1() {
-  // ... (existing code for word1 checking)
-
-  // After updating the word1, check if all words are guessed correctly
   checkAllWordsGuessed();
 }
 
-// Define the functions for checking other words (checkWord2, checkWord3, etc.)
+
+
 
 // Function to check if all words are guessed correctly
 function checkAllWordsGuessed() {
@@ -168,8 +174,6 @@ function redirectToHBDPage() {
   if (allWordsGuessed) {
     window.location.href = "hbd.html";
   } else {
-    alert("Please guess all the words correctly first!");
+    alert("WAH! Sagutan mo muna lahaat. Hmp. -,- ");
   }
 }
-
-        
