@@ -8,7 +8,7 @@ function checkWord1() {
   word1input = word1input.toUpperCase();
 
   if (word1input === w1) {
-    alert("Okaaaay, that was easy!");
+    alert("Yan yessyy, it starts with your mamshie syempre! :*");
     cell1A.innerText = "A";
     cell1I.innerText = "I";
     cell1L.innerText = "L";
@@ -16,9 +16,9 @@ function checkWord1() {
     cell1E2.innerText = "E";
     cell1N.innerText = "N";
   } else if (word1input === "") {
-    alert("SUMAGOOOOOT KAAAAA!");
+    alert("MAMSHIIEE AYUSIN MO! HMP!");
   } else {
-    alert("WROOOONG! HMP!");
+    alert("HALAA DI AKO KILALA NG MAMSHIE KO :<");
   }
 
   // After updating the word1, check if all words are guessed correctly
@@ -34,7 +34,7 @@ function checkWord2() {
   word2input = word2input.toUpperCase();
 
 if (word2input === w2) {
-    alert("Awieee, owkie tama! :>");
+    alert("Awieee, owkie tama! Dami hints eh hmp :>");
     cell2B.innerText = "B";
     cell2L.innerText = "L";
     cell2U.innerText = "U";
@@ -42,7 +42,7 @@ if (word2input === w2) {
    
   } 
 else if (word2input==="") {
-    alert("SUMAGOOOOOT KAAAAA!");
+    alert("AH SIGEEEE!?!");
 }
 else {
     alert("WROOOONG! HMP!");
@@ -58,7 +58,7 @@ function checkWord3() {
   word3input = word3input.toUpperCase();
 
 if (word3input === w3) {
-    alert("Huwaw, sigi next. HAHAHA");
+    alert("Zero syempre, there's only you. One and only mamshie ko 🤗");
     cell3Z.innerText = "Z";
     cell3E.innerText = "E";
     cell3R.innerText = "R";
@@ -66,10 +66,10 @@ if (word3input === w3) {
     
   } 
 else if (word3input==="") {
-    alert("SUMAGOOOOOT KAAAAA!");
+    alert("MAMSHIEE SUMAGOOOT KAAA!!");
 }
 else {
-    alert("WROOOONG! HMP!");
+    alert("IHHH BAT MALI!? :<");
   }
   checkAllWordsGuessed();
 }
@@ -106,14 +106,14 @@ function checkWord5() {
   word5input = word5input.toUpperCase();
 
 if (word5input === w5) {
-    alert("Ameyziing, nagreview.");
+    alert("Awiee galing ng mamshie ko ah, nagreview ng notes HAHAHAHA");
     cell5T.innerText = "T";
     cell5I.innerText = "I";
     cell5M.innerText = "M";
     cell5E.innerText = "E";
     
   } else if (word5input==="") {
-    alert("SUMAGOOOOOT KAAAAA!");
+    alert("Halaa lagyan mo po sagot aba");
 }
 else {
     alert("WROOOONG! HMP!");
@@ -137,11 +137,11 @@ if (word6input === w6) {
     
   }
 else if (word6input==="") {
-    alert("SUMAGOOOOOT KAAAAA!");
+    alert("SUMAGOOOOOOT KAAAA MAMSHIEEEEE!!!");
 }
 
 else {
-    alert("Mamshie naman, name mo na yan o, HMP!");
+    alert("Mamshie naman, HMP!");
   }
   checkAllWordsGuessed();
 }
