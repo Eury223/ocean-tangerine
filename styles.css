@@ -13,7 +13,7 @@ body {
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   padding: 20px;
-  max-width: 500px;
+  max-width: 500px; /* Set a maximum width for larger screens */
   margin: 0 auto 20px;
 }
 
@@ -28,9 +28,9 @@ td {
   border: 3px solid black;
   padding: 0; /* Set padding to 0 to ensure cells remain square */
   text-align: center;
-  width: 100px; /* Set the width and height of cells to a fixed size */
-  height: 100px;
-  font-size: 30px;
+  width: 50px; /* Set the width and height of cells to a fixed size for mobile view */
+  height: 50px;
+  font-size: 15px; /* Reduce the font size for mobile view */
 }
 
 th {
@@ -39,7 +39,7 @@ th {
 
 /* Input and button styles */
 input[type="text"] {
-  width: 300px; /* Set the width of input fields to a fixed size */
+  width: 100%; /* Set the width of input fields to fill the container */
   padding: 8px;
   margin-bottom: 6px;
   border: 3px solid #ccc;
@@ -70,15 +70,21 @@ button:active {
 @media only screen and (max-width: 600px) {
   .table-container,
   .buttons-container {
-    max-width: 800px; /* Set a fixed max-width for small screens to maintain consistency */
+    max-width: 100%; /* Set a full width for smaller screens to make it fit perfectly */
+  }
+
+  th,
+  td {
+    width: 30px; /* Adjust the cell size for smaller screens */
+    height: 30px;
+    font-size: 10px; /* Further reduce the font size for smaller screens */
   }
 
   input[type="text"] {
-    width: 300px;
-    font-size: 14px;
+    font-size: 14px; /* Adjust the font size for smaller screens */
   }
 
   button {
-    font-size: 14px;
+    font-size: 14px; /* Adjust the button font size for smaller screens */
   }
 }
