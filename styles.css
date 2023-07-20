@@ -88,3 +88,9 @@ button:active {
     font-size: 14px; /* Adjust the button font size for smaller screens */
   }
 }
+
+/* Remove underline from the "Click Here" button */
+#clickHereButton {
+  text-decoration: none;
+}
+
