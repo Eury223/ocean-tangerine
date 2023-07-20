@@ -127,4 +127,49 @@ else {
     alert("Mamshie naman, name mo na yan o, HMP!");
   }
 }
+
+
+////////////
+// Define a global variable to keep track of correct guesses
+let allWordsGuessed = false;
+
+// Define the function to check the word
+function checkWord1() {
+  // ... (existing code for word1 checking)
+
+  // After updating the word1, check if all words are guessed correctly
+  checkAllWordsGuessed();
+}
+
+// Define the functions for checking other words (checkWord2, checkWord3, etc.)
+
+// Function to check if all words are guessed correctly
+function checkAllWordsGuessed() {
+  const words = ["AILEEN", "BLUE", "ZERO", "VALE", "TIME", "LUIS"];
+  let allGuessed = true;
+
+  for (let i = 0; i < words.length; i++) {
+    const wordInput = document.getElementById("word" + (i + 1) + "Input").value.toUpperCase();
+    if (wordInput !== words[i]) {
+      allGuessed = false;
+      break;
+    }
+  }
+
+  if (allGuessed) {
+    allWordsGuessed = true;
+    const clickHereButton = document.getElementById("clickHereButton");
+    clickHereButton.style.display = "block"; // Show the button
+  }
+}
+
+// Function to handle the "Click Here" button click
+function redirectToHBDPage() {
+  if (allWordsGuessed) {
+    window.location.href = "hbd.html";
+  } else {
+    alert("Please guess all the words correctly first!");
+  }
+}
+
         
