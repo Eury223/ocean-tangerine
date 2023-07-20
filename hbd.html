@@ -1,9 +1,9 @@
-<!<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Gift Card </title>
+  <title>Gift Card</title>
   <style>
     body {
       font-family: Arial, sans-serif;
@@ -52,20 +52,10 @@
 <body>
   <div class="gift-card">
     <img src="https://raw.githubusercontent.com/Eury223/Bdy/main/mi.png" alt="Gift Card Image">
-    <h2>This serves as a redeemable gift card!</h2>
-    <p>Click the button below for more details. Proceed with caution. Chena, basta click mo na lang mamshie HHAHAHAHAHA</p>
-
-<button onclick="redirectToTxtFile()">MUWAH!</button>
-
-  <script>
-    function redirectToTxtFile() {
-      var githubUsername = "eury223";
-      var repositoryName = "Bdy";
-      var txtFilePath = "MUWAH.txt";
-      var url = "https://raw.githubusercontent.com/" + githubUsername + "/" + repositoryName + "/main/" + txtFilePath;
-      window.location.href = url;
-    }
-  </script>
+    <h2>Yay! You won a Gift Card!</h2>
+    <p>This serves as your reward for taking the time to complete the mini word puzzle. I do hope you saw my actual message there 😘. Click the button below to redeem your reward.</p>
+    <button onclick="checkPassword()">MUWAH!</button>
   </div>
+  <script src="password.js"></script>
 </body>
 </html>
