@@ -8,7 +8,7 @@ function checkWord1() {
   word1input = word1input.toUpperCase();
 
   if (word1input === w1) {
-    alert("Yan yessyy, it starts with your mamshie syempre! :*");
+    alert("Yan yessyy, it starts with your mamshie syempre! 😘");
     cell1A.innerText = "A";
     cell1I.innerText = "I";
     cell1L.innerText = "L";
@@ -34,7 +34,7 @@ function checkWord2() {
   word2input = word2input.toUpperCase();
 
 if (word2input === w2) {
-    alert("Awieee, owkie tama! Dami hints eh hmp :>");
+    alert("Awieee, owkie tama! Dami hints eh hmp 🤧");
     cell2B.innerText = "B";
     cell2L.innerText = "L";
     cell2U.innerText = "U";
@@ -82,7 +82,7 @@ function checkWord4() {
   word4input = word4input.toUpperCase();
 
 if (word4input === w4) {
-    alert("ML gadz yarn? Ge na next!");
+    alert("ML gadz yarn? Ge na neeeeext! 😂");
     cell4V.innerText = "V";
     cell4A.innerText = "A";
     cell4L.innerText = "L";
@@ -106,7 +106,7 @@ function checkWord5() {
   word5input = word5input.toUpperCase();
 
 if (word5input === w5) {
-    alert("Awiee galing ng mamshie ko ah, nagreview ng notes HAHAHAHA");
+    alert("Awiee galing ng mamshie ko ah, nagreview ng notes HAHAHAHA 😤");
     cell5T.innerText = "T";
     cell5I.innerText = "I";
     cell5M.innerText = "M";
@@ -129,7 +129,7 @@ function checkWord6() {
   word6input = word6input.toUpperCase();
 
 if (word6input === w6) {
-    alert("Goodjob mamshie, u know your name naman pala. Chena HAHAHA");
+    alert("Goodjob mamshie, u know your name naman pala. Chena HAHAHA cutieee mo Mikel Gian Luis!!");
     cell6L.innerText = "L";
     cell6U.innerText = "U";
     cell6I.innerText = "I";
