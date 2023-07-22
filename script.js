@@ -172,7 +172,7 @@ function checkAllWordsGuessed() {
 // Function to handle the "Click Here" button click
 function redirectToHBDPage() {
   if (allWordsGuessed) {
-    window.location.href = "hbdvid.html";
+    window.location.href = "hbd.html";
   } else {
     alert("WAH! Sagutan mo muna lahaat. Hmp. -,- ");
   }
