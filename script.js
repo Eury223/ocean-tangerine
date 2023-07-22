@@ -14,9 +14,9 @@ function checkWord1() {
     cell14.innerText = "E";
     cell15.innerText = "E";
     cell16.innerText = "N";
-    cell17.innerText = "";
-    cell18.innerText = "";
-    cell19.innerText = "";
+    cell17.innerText = "♡";
+    cell18.innerText = "♡";
+    cell19.innerText = "♡";
     
   } else if (word1input === "") {
     alert("MAMSHIIEE AYUSIN MO! HMP!");
@@ -36,15 +36,15 @@ function checkWord2() {
 
 if (word2input === w2) {
     alert("Awieee, owkie tama! Dami hints eh hmp 🤧");
-    cell21.innerText = "";
+    cell21.innerText = "♡";
     cell22.innerText = "B";
     cell23.innerText = "L";
     cell24.innerText = "U";
     cell25.innerText = "E";
-    cell26.innerText = "";
-    cell27.innerText = "";
-    cell28.innerText = "";
-    cell29.innerText = "";
+    cell26.innerText = "♡";
+    cell27.innerText = "♡";
+    cell28.innerText = "♡";
+    cell29.innerText = "♡";
    
   } 
 else if (word2input==="") {
@@ -69,11 +69,11 @@ if (word3input === w3) {
     cell32.innerText = "E";
     cell33.innerText = "R";
     cell34.innerText = "O";
-    cell35.innerText = "";
-    cell36.innerText = "";
-    cell37.innerText = "";
-    cell38.innerText = "";
-    cell39.innerText = "";
+    cell35.innerText = "♡";
+    cell36.innerText = "♡";
+    cell37.innerText = "♡";
+    cell38.innerText = "♡";
+    cell39.innerText = "♡";
     
   } 
 else if (word3input==="") {
@@ -94,15 +94,15 @@ function checkWord4() {
 
 if (word4input === w4) {
     alert("ML gadz yarn? Ge na neeeeext! 😂");
-    cell41.innerText = "";
-    cell42.innerText = "";
-    cell43.innerText = "";
-    cell44.innerText = "";
+    cell41.innerText = "♡";
+    cell42.innerText = "♡";
+    cell43.innerText = "♡";
+    cell44.innerText = "♡";
     cell45.innerText = "V";
     cell46.innerText = "A";
     cell47.innerText = "L";
     cell48.innerText = "E";
-    cell49.innerText = "";
+    cell49.innerText = "♡";
     
     
   }
@@ -124,15 +124,15 @@ function checkWord5() {
 
 if (word5input === w5) {
     alert("Awiee galing ng mamshie ko ah, nagreview ng notes HAHAHAHA 😤");
-    cell51.innerText = "";
-    cell52.innerText = "";
+    cell51.innerText = "♡";
+    cell52.innerText = "♡";
     cell53.innerText = "T";
     cell54.innerText = "I";
     cell55.innerText = "M";
     cell56.innerText = "E";
-    cell57.innerText = "";
-    cell58.innerText = "";
-    cell59.innerText = "";
+    cell57.innerText = "♡";
+    cell58.innerText = "♡";
+    cell59.innerText = "♡";
     
   } else if (word5input==="") {
     alert("Halaa lagyan mo po sagot aba");
@@ -152,11 +152,11 @@ function checkWord6() {
 
 if (word6input === w6) {
     alert("Goodjob mamshie, u know your name naman pala. Chena HAHAHA cutieee mo Mikel Gian Luis!!");
-    cell61.innerText = "";
-    cell62.innerText = "";
-    cell63.innerText = "";
-    cell64.innerText = "";
-    cell65.innerText = "";
+    cell61.innerText = "♡";
+    cell62.innerText = "♡";
+    cell63.innerText = "♡";
+    cell64.innerText = "♡";
+    cell65.innerText = "♡";
     cell66.innerText = "L";
     cell67.innerText = "U";
     cell68.innerText = "I";
