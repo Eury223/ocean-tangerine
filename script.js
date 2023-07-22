@@ -1,7 +1,6 @@
-// Define a global variable to keep track of correct guesses
 let allWordsGuessed = false;
 
-// Define the function to check the word
+
 function checkWord1() {
   var word1input = document.getElementById("word1Input").value;
   var w1 = "AILEEN";
@@ -9,24 +8,26 @@ function checkWord1() {
 
   if (word1input === w1) {
     alert("Yan yessyy, it starts with your mamshie syempre! 😘");
-    cell1A.innerText = "A";
-    cell1I.innerText = "I";
-    cell1L.innerText = "L";
-    cell1E.innerText = "E";
-    cell1E2.innerText = "E";
-    cell1N.innerText = "N";
+    cell11.innerText = "A";
+    cell12.innerText = "I";
+    cell13.innerText = "L";
+    cell14.innerText = "E";
+    cell15.innerText = "E";
+    cell16.innerText = "N";
+    cell17.innerText = "";
+    cell18.innerText = "";
+    cell19.innerText = "";
+    
   } else if (word1input === "") {
     alert("MAMSHIIEE AYUSIN MO! HMP!");
   } else {
     alert("HALAA DI AKO KILALA NG MAMSHIE KO :<");
   }
 
-  // After updating the word1, check if all words are guessed correctly
+  
   checkAllWordsGuessed();
 }
 
-// Define the functions for checking other words (checkWord2, checkWord3, etc.)
-// ...
 
 function checkWord2() {
   var word2input = document.getElementById("word2Input").value;
@@ -35,10 +36,15 @@ function checkWord2() {
 
 if (word2input === w2) {
     alert("Awieee, owkie tama! Dami hints eh hmp 🤧");
-    cell2B.innerText = "B";
-    cell2L.innerText = "L";
-    cell2U.innerText = "U";
-    cell2E.innerText = "E";
+    cell21.innerText = "";
+    cell22.innerText = "B";
+    cell23.innerText = "L";
+    cell24.innerText = "U";
+    cell25.innerText = "E";
+    cell26.innerText = "";
+    cell27.innerText = "";
+    cell28.innerText = "";
+    cell29.innerText = "";
    
   } 
 else if (word2input==="") {
@@ -59,10 +65,15 @@ function checkWord3() {
 
 if (word3input === w3) {
     alert("Zero syempre, there's only you. One and only mamshie ko 🤗");
-    cell3Z.innerText = "Z";
-    cell3E.innerText = "E";
-    cell3R.innerText = "R";
-    cell3O.innerText = "O";
+    cell31.innerText = "Z";
+    cell32.innerText = "E";
+    cell33.innerText = "R";
+    cell34.innerText = "O";
+    cell35.innerText = "";
+    cell36.innerText = "";
+    cell37.innerText = "";
+    cell38.innerText = "";
+    cell39.innerText = "";
     
   } 
 else if (word3input==="") {
@@ -83,10 +94,16 @@ function checkWord4() {
 
 if (word4input === w4) {
     alert("ML gadz yarn? Ge na neeeeext! 😂");
-    cell4V.innerText = "V";
-    cell4A.innerText = "A";
-    cell4L.innerText = "L";
-    cell4E.innerText = "E";
+    cell41.innerText = "";
+    cell42.innerText = "";
+    cell43.innerText = "";
+    cell44.innerText = "";
+    cell45.innerText = "V";
+    cell46.innerText = "A";
+    cell47.innerText = "L";
+    cell48.innerText = "E";
+    cell49.innerText = "";
+    
     
   }
 else if (word4input==="") {
@@ -107,10 +124,15 @@ function checkWord5() {
 
 if (word5input === w5) {
     alert("Awiee galing ng mamshie ko ah, nagreview ng notes HAHAHAHA 😤");
-    cell5T.innerText = "T";
-    cell5I.innerText = "I";
-    cell5M.innerText = "M";
-    cell5E.innerText = "E";
+    cell51.innerText = "";
+    cell52.innerText = "";
+    cell53.innerText = "T";
+    cell54.innerText = "I";
+    cell55.innerText = "M";
+    cell56.innerText = "E";
+    cell57.innerText = "";
+    cell58.innerText = "";
+    cell59.innerText = "";
     
   } else if (word5input==="") {
     alert("Halaa lagyan mo po sagot aba");
@@ -130,10 +152,15 @@ function checkWord6() {
 
 if (word6input === w6) {
     alert("Goodjob mamshie, u know your name naman pala. Chena HAHAHA cutieee mo Mikel Gian Luis!!");
-    cell6L.innerText = "L";
-    cell6U.innerText = "U";
-    cell6I.innerText = "I";
-    cell6S.innerText = "S";
+    cell61.innerText = "";
+    cell62.innerText = "";
+    cell63.innerText = "";
+    cell64.innerText = "";
+    cell65.innerText = "";
+    cell66.innerText = "L";
+    cell67.innerText = "U";
+    cell68.innerText = "I";
+    cell69.innerText = "S";
     
   }
 else if (word6input==="") {
@@ -148,8 +175,6 @@ else {
 
 
 
-
-// Function to check if all words are guessed correctly
 function checkAllWordsGuessed() {
   const words = ["AILEEN", "BLUE", "ZERO", "VALE", "TIME", "LUIS"];
   let allGuessed = true;
@@ -165,11 +190,10 @@ function checkAllWordsGuessed() {
   if (allGuessed) {
     allWordsGuessed = true;
     const clickHereButton = document.getElementById("clickHereButton");
-    clickHereButton.style.display = "block"; // Show the button
+    clickHereButton.style.display = "block"; 
   }
 }
 
-// Function to handle the "Click Here" button click
 function redirectToHBDPage() {
   if (allWordsGuessed) {
     window.location.href = "hbd.html";
