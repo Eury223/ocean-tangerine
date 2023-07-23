@@ -151,7 +151,7 @@ function checkWord6() {
   word6input = word6input.toUpperCase();
 
 if (word6input === w6) {
-    alert("Goodjob mamshie, u know your name naman pala. Chena HAHAHA cutieee mo Mikel Gian Luis!!");
+    alert("Goodjob mamshie, finally. You know your name naman pala. Chena HAHAHA cutieee mo Mikel Gian Luis!!");
     cell61.innerText = "♡";
     cell62.innerText = "♡";
     cell63.innerText = "♡";
